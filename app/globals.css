@@ -4,3 +4,29 @@
 
 
 
+:root {
+    --background: #ffffff;
+    --foreground: #171717;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: #0a0a0a;
+      --foreground: #ededed;
+    }
+  }
+  body {
+    color: var(--foreground);
+    background: var(--background);
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  @layer utilities {
+    .text-balance {
+      text-wrap: balance;
+    }
+    .gradient{
+      @apply bg-gradient-to-b from-white via-gray-300 to-gray-700;
+    }
+    .gradient-text{
+      @apply gradient text-transparent bg-clip-text 
+    }
+  }
